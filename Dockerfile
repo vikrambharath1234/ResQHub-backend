@@ -2,9 +2,9 @@ FROM maven:3.9.11-eclipse-temurin-21 AS build
 
 WORKDIR /app
 
-COPY pom.xml .
+COPY resqhub-backend/pom.xml .
 
-COPY src ./src
+COPY resqhub-backend/src ./src
 
 RUN mvn clean package -DskipTests
 
